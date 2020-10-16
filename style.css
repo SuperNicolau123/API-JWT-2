@@ -113,4 +113,9 @@ label #cancel{
     visibility: visible;
   }
 }
+
+body {
+  size: 100vh 100vw;
+}
+
 /* Don't Forget to Subscribe our Channel[CodingNepal] */
