@@ -13,9 +13,11 @@ app.get('/', (req, res, next) => {
     res.json({message: "Tudo ok por aqui!"});
 })
  
-app.get('/clientes', (req, res, next) => { 
-    console.log("Retornou todos clientes!");
-    res.json([{id:1,nome:'luiz'}]);
+app.get('/carros', (req, res, next) => { 
+    var url = `http://localhost:3000/carros/${id}`;
+    res = await fetch(url)
+    const carros = await res.json();
+    console.log(carros)
 }) 
  
 var server = http.createServer(app); 
