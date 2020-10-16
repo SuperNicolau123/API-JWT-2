@@ -15,9 +15,8 @@ app.get('/', (req, res, next) => {
  
 app.get('/carros', (req, res, next) => { 
     var url = `http://localhost:3000/carros/${id}`;
-    res = await fetch(url)
-    const carros = await res.json();
-    console.log(carros)
+    const resultado = fetch(url)
+    res.json(resultado)
 }) 
  
 var server = http.createServer(app); 
